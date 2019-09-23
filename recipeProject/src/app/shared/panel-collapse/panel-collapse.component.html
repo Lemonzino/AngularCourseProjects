@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header" id="headingOne" style="cursor: pointer;" (click)="onToggleFilter()">
+    <h5 class="mb-0">
+        <a>{{ labelValue }}</a>
+    </h5>
+  </div>
+
+  <div *ngIf="labelShown" [@panelShow]>
+    <div class="card-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+  

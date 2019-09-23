@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="list-group scrollable">
+          <app-cocktail-recipes-item 
+          *ngFor="let cocktail of getValues(cocktailsList)"
+          [cocktailInfo]="cocktail">
+        </app-cocktail-recipes-item>
+      </div>
+    </div>
+  </div>
+</div>

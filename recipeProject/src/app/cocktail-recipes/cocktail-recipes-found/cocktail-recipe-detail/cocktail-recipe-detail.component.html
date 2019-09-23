@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">{{ ( selectedCocktail | async )?.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+     <p><b>Categoria: </b>{{ ( selectedCocktail | async )?.category }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p><b>Tipologia: </b>{{ ( selectedCocktail | async )?.alcholic }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p><b>Tipo di bicchiere: </b>{{ ( selectedCocktail | async )?.glassType }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="{{ ( selectedCocktail | async )?.imgUrl }}" alt="{{ ( selectedCocktail | async )?.name}}" class="rounded mx-auto d-block img-responsive" style="max-height: 300px;">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+		  {{ ( selectedCocktail | async )?.detail }}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let ingredient of (selectedCocktail | async)?.ingredients">
+            {{ ingredient.ingredName }}<span class="badge badge-primary badge-pill float-right">{{ ingredient.ingredAmount }}</span>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-12">
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-12">
+		
+	</div>
+</div>

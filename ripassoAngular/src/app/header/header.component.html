@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a routerLink="/" class="navbar-brand">Home</a>
+		</div>
+
+		<div class="navbar-default">
+			<ul class="nav navbar-nav">
+				<li class="dropdown" appDropdown>
+					<a style="cursor: pointer;" class="dropdown-toggle" role="button">Choose zone<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a style="cursor: pointer;" routerLink="routerZone">Router Zone</a></li>
+						<li><a style="cursor: pointer;" routerLink="randomZone">Random Zone</a></li>
+						<li><a style="cursor: pointer;" routerLink="weatherZone">Weather Zone</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

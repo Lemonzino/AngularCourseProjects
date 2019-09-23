@@ -1,0 +1,53 @@
+<app-panel-collapse labelValueClose="Mostra filtri" labelValueOpen="Nascondi filtri">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <label for="filterToUse">Filtra per:</label>
+        <select name="filterToUse" class="form-control" [(ngModel)]="selectedValue">
+          <option value="s">Nome</option>
+          <option value="c">Categoria</option>
+          <option value="i">Ingrediente</option>
+          <option value="g">Bicchiere utilizzato</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div [ngSwitch]="selectedValue">
+                <div *ngSwitchCase="'s'">
+                  <label for="valueToSearch">Nome del drink:</label>
+                  <input type="text" name="valueToSearch" class="form-control" ngModel required #recipeName="ngModel">
+                  <h4 *ngIf="!recipeName.valid && recipeName.touched">Inserire un valore valido</h4>
+                </div>
+                <div *ngSwitchCase="'c'">
+                  <label for="valueToSearch">Categoria del drink:</label>
+                  <select name="valueToSearch" class="form-control" [ngModel]="categories[0]">
+                    <option *ngFor="let category of categories" value="{{ category }}">{{ category }}</option>
+                  </select>
+                </div>
+                <div *ngSwitchCase="'i'">
+                  <label for="valueToSearch">Ingrediente del drink:</label>
+                  <select name="valueToSearch" class="form-control" [ngModel]="ingredients[0]">
+                      <option *ngFor="let ingredient of ingredients" value="{{ ingredient }}">{{ ingredient }}</option>
+                    </select>
+                </div>
+                <div *ngSwitchCase="'g'">
+                  <label for="valueToSearch">Bicchiere usato per il drink:</label>
+                  <select name="valueToSearch" class="form-control" [ngModel]="glasses[0]">
+                      <option *ngFor="let glass of glasses" value="{{ glass }}">{{ glass }}</option>
+                    </select>
+                </div>
+              </div>
+              <br>
+              <button class="btn btn-primary">Cerca...</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</app-panel-collapse>

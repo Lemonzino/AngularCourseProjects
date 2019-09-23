@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div formGroupName="userInfo">
+    <label for="name">Name</label>
+    <input type="text" name="name" formControlName="name" class="form-control">
+    <label for="mail">Mail</label>
+    <input type="text" name="mail" formControlName="mail" class="form-control">
+  </div>
+  <label for="password">Password</label>
+  <input type="password" name="password" formControlName="password" class="form-control">
+  <label for="testSelect">Choose one</label>
+  <select name="testSelect" formControlName="testSelect" class="form-control">
+    <option value="1">Ciao</option>
+    <option value="2">Hello</option>
+    <option value="3">Test</option>
+  </select>
+  <div formArrayName="randomStuff">
+    <div *ngFor="let control of form.get('randomStuff').controls; let i = index" [formGroupName]="i">
+      <label for="randomStuff">RandomStuffInfo</label>
+      <input type="text" name="randomStuff" class="form-control" formControlName="stuffInfo">
+      <h3 *ngIf="checkInfo(i)">Inserire info valida</h3>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-primary" (click)="addRandom()">Add RandomStuff</button>
+  <button type="button" class="btn btn-primary" (click)="setValues()">Set Values</button>
+</form>

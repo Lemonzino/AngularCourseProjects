@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a routerLink="/" class="navbar-brand" style="cursor: pointer;">LFR</a>
+
+  <div class="navbar-default">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" style="cursor: pointer;" routerLinkActive="active" routerLink="cocktail-recipes" *ngIf="isAuthenticated()">Cocktail</a>
+    </div>
+  </div>
+
+  <div class="navbar-nav ml-auto">
+    <a class="nav-item nav-link" style="cursor: pointer;" (click)="onLogout()" *ngIf="isAuthenticated()">Logout</a>    
+    <a class="nav-item nav-link" style="cursor: pointer;" routerLink="login" *ngIf="!isAuthenticated()">Login</a>
+  </div>
+</nav>

@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="alert alert-danger" role="alert"  *ngIf="onError()">
+    {{ errorMessage }}
+  </div>
+
+  <br>
+
+  <label for="email">Email:</label>
+  <input type="text" name="email" formControlName="email" class="form-control">
+
+  <label for="password">Password:</label>
+  <input type="password" name="password" formControlName="password" class="form-control">
+
+  <br>
+  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Login</button>
+</form>

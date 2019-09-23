@@ -1,0 +1,8 @@
+<button [@enterAnim]="animState" type="button" class="list-group-item list-group-item-action" style="cursor: pointer" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [routerLink]='[index]' routerLinkActive="active">
+    <div class="float-left">
+        <h4 class="list-group-item-heading">{{ cocktail.name }}</h4>
+    </div>
+    <span class="float-right">
+        <img src="{{ cocktail.imgUrl }}" alt="{{ cocktail.name }}" class="img-responsive rounded" style="max-height: 50px;">
+    </span>
+</button>

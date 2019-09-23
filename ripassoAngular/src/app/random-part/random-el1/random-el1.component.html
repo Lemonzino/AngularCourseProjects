@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <input type="text" #el1Value>
+    <button class="btn btn-primary" (click)="onSend(el1Value.value)">Send to El2</button>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="col-xs-12" *ngFor="let el of el1Values; let i = index">
+    <p [ngStyle]="{color: getColor(i), backgroundColor: getBackColor(i)}">{{ i }}: {{el}}</p>
+  </div>
+</div>

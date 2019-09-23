@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{ data }}</p>
+    <input type="text" [(ngModel)]="data">
+  </div>
+  <div class="col-xs-12">
+    <button class="btn btn-primary" (click)="onAddData()" [disabled]="data !== undefined">Add data to child2</button>
+    <button class="btn btn-primary" (click)="onNavigateToHome()">Send to child1</button>
+  </div>
+</div>
