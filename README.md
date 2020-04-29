@@ -1,6 +1,10 @@
 Angular projects from Angular 6 course.
 
-Assignments contains the exercises made during the course.
-courseProject contains the final project of the course.
-ripassoAngular and recipeProject are two projects that I've made as review of the topics.
+**Assignments** contains the exercises made during the course.
+**courseProject** contains the final project of the course.
+**ripassoAngular** and **recipeProject** are two projects that I've made as review of the topics.
 The other folders contain the various topics of the course.
+
+
+
+The repository also contains ANGULAR.docx file. It contains some useful information about Angular and some CLI commands.
